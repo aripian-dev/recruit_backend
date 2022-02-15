@@ -1,0 +1,4 @@
+FROM mongo
+
+COPY init.json /init.json
+CMD mongoimport --host mongodb --db brio_test --collection Notification --type json --file seed.json --jsonArray
