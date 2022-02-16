@@ -7,12 +7,12 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('brio_test')
-    .setDescription('api for briohr test')
+    .setTitle('recruitment api')
+    .setDescription('api for recruitment')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('docs/briotest', app, document);
+  SwaggerModule.setup('docs/recruitment', app, document);
 
   const port = process.env.PORT || 8080;
 
